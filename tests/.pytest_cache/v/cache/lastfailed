@@ -1,0 +1,5 @@
+{
+  "modules/auth/test_login_manager_integration.py": true,
+  "modules/users/test_permissions.py": true,
+  "test_openapi_spec_validity.py": true
+}
