@@ -13,8 +13,8 @@ pipeline {
             steps {
                 sh 'echo "checking out scm"'
                 checkout scm
-                sh 'echo "Installing requirements"'
-                sh 'echo "This is a test==========="'
+                sh 'Install projects dependencies'
+                sh 'pip install -r tasks/requirements.txt'
             }
         }
 
