@@ -13,18 +13,17 @@ pipeline {
             steps {
                 sh 'echo "checking out scm"'
                 checkout scm
-                sh 'Install projects dependencies'
-                sh 'ls'
-                sh 'pwd'
+                sh 'echo "Install projects dependencies"'
+                sh 'pip install --upgrade pip'
                 sh 'pip install -r tasks/requirements.txt'
             }
         }
 
         stage("Test") {
             steps {
-                sh 'echo "running tests"'
-                sh 'service postgresql start'
-                sh 'nosetests --with-coverage'
+                sh 'echo "running test"'
+                sh 'pip install -r app/requirements.txt'
+                sh 'pip install -r tests/requirements.txt'
             }
         }
 
