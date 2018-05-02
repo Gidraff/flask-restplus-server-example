@@ -10,12 +10,6 @@ pipeline {
     stages {
        
         stage("Build") {
-            agent {
-                docker {
-                    image 'gidraff/rest-image:0.0.2'
-                    args '-u root:root'
-                }
-            }
             steps {
                 sh 'echo "checking out scm"'
                 checkout scm
