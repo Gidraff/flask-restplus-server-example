@@ -1,5 +1,6 @@
 {
-  "tests/modules/auth/test_login_manager_integration.py": true,
-  "tests/modules/users/test_permissions.py": true,
-  "tests/test_openapi_spec_validity.py": true
+  "tests/test_app_creation.py::test_create_app_passing_flask_config_name[development]": true,
+  "tests/test_app_creation.py::test_create_app_passing_flask_config_name[production]": true,
+  "tests/test_app_creation.py::test_create_app_with_broken_import_config": true,
+  "tests/test_app_creation.py::test_create_app_with_non_existing_config": true
 }

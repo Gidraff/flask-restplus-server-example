@@ -2,7 +2,7 @@
 pipeline {
       agent {
         docker {
-            image 'gidraff/rest-image:0.0.1'
+            image 'gidraff/rest-image:0.0.2'
             args '-u root:root'
         }
       }
@@ -24,6 +24,8 @@ pipeline {
                 sh 'echo "running test"'
                 sh 'pip install -r app/requirements.txt'
                 sh 'pip install -r tests/requirements.txt'
+                sh 'export FLASK_CONFIG=testing'
+                sh 'py.test'
             }
         }
 
