@@ -14,6 +14,8 @@ pipeline {
                 sh 'echo "checking out scm"'
                 checkout scm
                 sh 'Install projects dependencies'
+                sh 'ls'
+                sh 'pwd'
                 sh 'pip install -r tasks/requirements.txt'
             }
         }
