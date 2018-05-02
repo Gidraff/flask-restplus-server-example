@@ -20,7 +20,6 @@ pipeline {
                 sh 'echo "checking out scm"'
                 checkout scm
                 sh 'echo "Install projects dependencies"'
-                sh 'echo "This is a test ======"'
                 sh 'pip install --upgrade pip'
                 sh 'ls'
                 sh 'pip install -r tasks/requirements.txt'
