@@ -14,7 +14,7 @@ pipeline {
                 sh 'echo "checking out scm"'
                 checkout scm
                 sh 'echo "Installing requirements"'
-       
+                sh 'echo "This is a test==========="'
             }
         }
 
