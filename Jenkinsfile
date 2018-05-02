@@ -15,6 +15,7 @@ pipeline {
                 checkout scm
                 sh 'echo "Install projects dependencies"'
                 sh 'pip install --upgrade pip'
+                sh 'ls'
                 sh 'pip install -r tasks/requirements.txt'
             }
         }
