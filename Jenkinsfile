@@ -32,6 +32,7 @@ pipeline {
 
         stage("Copy Artifacts"){
             steps {
+                sh 'echo "copying artifacts"'
                  archiveArtifacts artifacts:'*,*/,*/*', fingerprint:true
             }
         }
