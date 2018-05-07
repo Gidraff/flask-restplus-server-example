@@ -23,6 +23,7 @@ pipeline {
         stage("Test") {
             steps {
                 sh 'echo "running test"'
+                sh 'echo "running test---"'
                 sh 'pip install -r app/requirements.txt'
                 sh 'pip install -r tests/requirements.txt'
                 sh 'export FLASK_CONFIG=testing'
