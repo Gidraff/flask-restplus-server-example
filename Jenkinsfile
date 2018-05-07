@@ -26,7 +26,7 @@ pipeline {
                 sh 'pip install -r app/requirements.txt'
                 sh 'pip install -r tests/requirements.txt'
                 sh 'export FLASK_CONFIG=testing'
-                sh 'py.test'
+                sh 'py.test --cov=app'
             }
         }
 
